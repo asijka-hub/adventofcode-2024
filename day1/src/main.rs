@@ -33,5 +33,8 @@ fn second_part(mut x: Vec<i32>, mut y: Vec<i32>) -> i32 {
 
     // dbg!(&map);
 
-    x.iter().zip(y.iter()).map(|(a, b)| (*map.entry(*a).or_default()) * (*a)).sum()
+    x.iter()
+        .zip(y.iter())
+        .map(|(a, b)| (*map.entry(*a).or_default()) * (*a))
+        .sum()
 }
